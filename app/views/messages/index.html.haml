@@ -1,0 +1,39 @@
+.wrapper
+  .side_bar
+    .side_bar__top
+      .side_bar__top__box
+        .side_bar__top__box__user-name
+          masa
+        .side_bar__top__box__user-name__icon-box
+          .side_bar__top__box__user-name__icon-box__left-icon
+          = link_to '#' , class: "side_bar__top__box__user-name__icon-box__left-icon__color" do
+            = icon('fas', 'edit')
+          .side_bar__top__box__user-name__icon-box__right-icon
+          = link_to '#' , class: "side_bar__top__box__user-name__icon-box__left-icon__color" do
+            = icon('fas', 'cog')
+    .groups
+      .group
+        .group__group-name
+          tech
+        .group__latest-message
+          まだメッセージはありません
+  .chat-main
+    .main-header
+      .main-header__left-box
+        .main-header__left-box__current-group
+          tech
+        .main-header__left-box__member-list
+          Member :  
+          .main-header__left-box__member-list__member
+            taro1234
+      .main-header__edit-btn
+        Edit
+    .messages
+    .form
+      .new-message
+        .input-box
+          %input{type: "text", class: "input-box__text", placeholder: "Type a message"}
+          %label{class: "input-box__image"}
+            = icon("fas", "image")
+            %input{type: "file", class: "input-box__image__file"}
+        %input{type: "submit",value:"Send", class: "send-btn"}
