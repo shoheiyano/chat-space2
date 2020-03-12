@@ -1,1 +1,20 @@
-＜サイドバー＞
+.side_bar
+  .side_bar__top
+    .side_bar__top__box
+      .side_bar__top__box__user-name
+        = current_user.name
+      .side_bar__top__box__user-name__icon-box
+        .side_bar__top__box__user-name__icon-box__left-icon
+        = link_to new_group_path , class: "side_bar__top__box__user-name__icon-box__left-icon__color" do
+          = icon('fas', 'edit')
+        .side_bar__top__box__user-name__icon-box__right-icon
+        = link_to edit_user_path(current_user) , class: "side_bar__top__box__user-name__icon-box__left-icon__color" do
+          = icon('fas', 'cog')
+  .groups
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) ,class: 'link-edit' do
+          .group__group-name
+            = group.name
+          .group__latest-message
+            = group.show_last_message
