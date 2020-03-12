@@ -38,12 +38,18 @@
     color: white;
     .group{
       margin-bottom: 40px;
+      .link-edit{
+        text-decoration: none;
+      }
       &__group-name{
         font-size: 15px;
         margin-bottom: 5px;
+        color: white;
+        list-style: none;
       }
       &__latest-message{
         font-size: 11px;
+        color: white;
       }
     }
   }
@@ -80,6 +86,10 @@
       padding: 0 20px;
       position: absolute;
       right: 40px;
+      .link-edit{
+        text-decoration: none;
+        color: #38aef0;
+      }
     }
   }
   .messages{
@@ -87,6 +97,28 @@
     height: calc(100vh - 190px);
     padding: 46px 40px;
     overflow: scroll; //どうなるかみてみたいからあとで消す。
+    .message{
+      padding-bottom: 40px;
+      .upper-message{
+        display: flex;
+        margin-bottom: 10px;
+        &__user-name{
+          color: #434a54;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__date{
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+      .lower-message{
+        color: #434a54;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
   }
   .form{
     background-color: #d2d2d2;
