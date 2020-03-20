@@ -131,13 +131,13 @@
         width: 100%;
         &__text{
           height: 50px;
-          width: 100%;
+          width: calc(100% - 155px);
           border-style: none;
           padding: 0 40px 0 10px;
         }
         &__image{
           position: absolute;
-          right: 10px;
+          right: 180px;
           top: 10px;
           font-size: 1.3rem;
           &__file{
@@ -152,6 +152,7 @@
         padding: 0 30px;
         margin-left: 15px;
         cursor: pointer;
+        float: right;
       }
     }
   }
